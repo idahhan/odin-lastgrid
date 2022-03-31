@@ -6,9 +6,9 @@ body {
 }
 
 #container {
-    display: grid;
+    display: inline-grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr  6fr;
+    grid-template-rows: 1fr  7fr;
     grid-template-areas: 
     "sideNav header"
     "sideNav body"
@@ -20,16 +20,28 @@ body {
 
     grid-area: sideNav;
     
-    display: grid;
-    grid-template-rows: 1fr 2fr 3fr;
+    display: inline-grid;
+    grid-template-rows: 10% 1fr 1fr 1fr 1fr;
     grid-template-areas: 
     "SideNavheader"
     "sideNav1"
     "sideNav2";
     row-gap: 15px;
 
+}
+#sideNavheader {
+    padding: 10px;
 
 }
+
+#sideNav1 > div {
+    padding: 10px;
+}
+
+#sideNav2 > div {
+    padding: 10px;
+}
+
 #header {
     grid-area: header;
 }
@@ -37,7 +49,7 @@ body {
 #body {
     grid-area: body;
     background-color: #E2E8F0;
-    display: grid;
+    display: inline-grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 5% 1fr;
     padding: 20px;
@@ -50,7 +62,7 @@ body {
 
 
 #yourProjects {
-    display: grid;
+    display: inline-grid;
     row-gap: 20px;
     column-gap: 20px;
     grid-template-columns: repeat(2, 1fr);
@@ -82,7 +94,7 @@ body {
     padding-left: 20px;
     border-radius: 8px;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(8, 150px );
+    grid-template-rows: repeat(8, 120px);
 }
 #announcement {
     grid-column: 2 /3;
@@ -123,6 +135,19 @@ body {
 }
 
 
+#header {
+    display: grid;
+}
+
+#topHeader {
+    display: grid;
+}
+
+#bottomHeader {
+    display: grid;
+}
+
+
 
 h2 {
     margin: 0;
@@ -133,4 +158,8 @@ h2 {
 h3 {
     font-size: 19px;
     font-weight: 550;
+    margin: 0;
+}
+h4 {
+    margin:0
 }
