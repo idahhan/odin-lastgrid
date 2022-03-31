@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-size: 21px;
+    font-family: sans-serif;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr  6fr;
+    grid-template-areas: 
+    "sideNav header"
+    "sideNav body"
+    }
+
+#sideNav {
+    background-color: #1992D4;
+    color: white;
+
+    grid-area: sideNav;
+    
+    display: grid;
+    grid-template-rows: 1fr 2fr 3fr;
+    grid-template-areas: 
+    "SideNavheader"
+    "sideNav1"
+    "sideNav2";
+    row-gap: 15px;
+
+
+}
+#header {
+    grid-area: header;
+}
+
+#body {
+    grid-area: body;
+    background-color: #E2E8F0;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 20px;
+}
+
+#yourProjects {
+    display: grid;
+    row-gap: 20px;
+    column-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 5% 1fr 1fr 1fr;
+}
+
+#projectTitle {
+    grid-column: 1 / 3;
+}
+
+#yourProjects > div {
+    background-color: white;
+}
+
+#other {
+    display: grid;
+    padding-left: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, fr);
+}
+
+.announcement > h4 {
+    font-size: 16px;;
+}
+.announcement > p {
+    font-size: 14px;
+}
+
+.trending > h4 {
+    font-size: 16px;;
+}
+
+.trending > p {
+    font-size: 14px;
+}
+
+.announcement, .trending {
+    background: white;;
+}
+
+h2 {
+    margin: 0;
+}
