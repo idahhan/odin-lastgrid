@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -31,7 +33,11 @@
 
         </div>
         <div id="header">
-            <div id="topHeader"></div>
+            <div id="topHeader">
+                <span id="searchIcon"></span>
+                <input type="text" name="searchbar" id="searchbar">
+                <span id="alertsIcon"> </span>
+            </div>
             <div id="bottomHeader"></div>
 
         </div>
@@ -46,8 +52,15 @@
             <div id="yourProjects">
                 
                 <div id="project1" class="projects">
+                    <span class="style"></span>
                     <h3>Super Cool project</h3>
                     <p>The US men’s national team qualified for the World Cup in Qatar last night after failing to do so in 2018. All they had to do was not lose by six goals against Costa Rica, and they managed to only lose by two</p>
+                    
+                    <div class="iconContainer">
+                        <span class="favorite"></span>
+                        <span class="watch"></span>
+                        <span class="share"></span>
+                    </div>
                 </div>
                 <div id="project2" class="projects">
                     <h3>Less Cool Project</h3>
