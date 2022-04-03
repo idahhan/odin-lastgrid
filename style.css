@@ -5,7 +5,10 @@ body {
     text-overflow: ellipsis;
 }
 
+
 #container {
+    width: 100vw;
+    height: 100vh;
     display: inline-grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr  7fr;
@@ -19,15 +22,9 @@ body {
     color: white;
 
     grid-area: sideNav;
+    display: flex;
+    flex-direction: column;
     
-    display: inline-grid;
-    grid-template-rows: 10% 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
-    "SideNavheader"
-    "sideNav1"
-    "sideNav2";
-    row-gap: 15px;
-
 }
 #sideNavheader {
     padding: 10px;
@@ -42,32 +39,8 @@ body {
     padding: 10px;
 }
 
-#header {
-    grid-area: header;
-}
 
 
-
-#searchIcon{
-    position:absolute;
-    background-image: url("search.png");
-    background-size: 24px 24px;
-    width: 24px;
-    height: 24px;
-    top: 17px;
-    left: 35px;
-}
-
-#alertsIcon {
-    position:absolute;
-    background-image: url("bell-ring-outline.png");
-    background-size: 24px 24px;
-    width: 24px;
-    height: 24px;
-    grid-column: 2 /3 ;
-    grid-row: 1;
-
-}
 #body {
     grid-area: body;
     background-color: #E2E8F0;
@@ -169,10 +142,12 @@ body {
 #other {
     display: grid;
     padding-left: 20px;
-    border-radius: 8px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
 }
+
+
+
 #announcement {
     grid-column: 2 /3;
     grid-row: 1;
@@ -213,6 +188,8 @@ body {
 
 
 #header {
+    grid-area: header;
+
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
@@ -221,13 +198,25 @@ body {
 
 #topHeader {
     display: grid;
-    grid-template-columns: 3fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(24,1fr);
     grid-template-rows: 1fr;
     position: relative;
     justify-items: center;
-    padding: 15px;
+    align-items: center;
 
 }
+
+
+#searchIcon{
+    position:absolute;
+    background-image: url("search.png");
+    background-size: 16px 16px;
+    width: 16px;
+    height: 16px;
+    top: 17px;
+    left: 40px;
+}
+
 
 
 #searchbar {
@@ -242,8 +231,37 @@ body {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    grid-column: 1/18 ;
+    grid-row: 1;
   }
 
+  #alertsIcon {
+    position:absolute;
+    background-image: url("bell-ring-outline.png");
+    background-size: 24px 24px;
+    width: 24px;
+    height: 24px;
+    grid-column: 18/19;
+    grid-row: 1;
+
+}
+
+#profilepic {
+    border-radius: 50%;
+    background-color: #FACC15;
+    width: 37px;
+    height: 37px;
+    grid-column: 19/21;
+    grid-row: 1;
+}
+
+#name {
+    grid-column: 21/25;
+    grid-row: 1;
+    font-size: 16px;
+    justify-self: left;
+
+}
 
 #bottomHeader {
     display: grid;
@@ -252,7 +270,14 @@ body {
 
 }
 
-
+button {
+    border-radius: 16px;
+    height: 38px;
+    width: 100px;
+    border: none;
+    background-color: #1992D4;
+    color: white;
+}
 
 h2 {
     margin: 0;
