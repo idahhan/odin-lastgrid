@@ -20,23 +20,121 @@ body {
 #sideNav {
     background-color: #1992D4;
     color: white;
-
-    grid-area: sideNav;
+    grid-area: sideNav; 
     display: flex;
     flex-direction: column;
-    
 }
-#sideNavheader {
-    padding: 10px;
+
+
+#sideNav1 {
+    display: grid;
+    column-gap: 15px;
+    row-gap: 10px;
+    grid-template-columns: 20% 50% 10% 5%;
+
 
 }
 
-#sideNav1 > div {
-    padding: 10px;
+.sideNavheader {
+    grid-column: 1/2;
+    justify-self: right;
+    content: url("view-dashboard.png");
+    padding-top: 10px;
+
 }
+.sideNavheader-content{
+    grid-column: 2/3;
+    padding-top: 15px;
+    padding-bottom: 30px;
+
+}
+
+
 
 #sideNav2 > div {
     padding: 10px;
+}
+
+.home{
+    grid-column: 1/2;
+    justify-self: right;
+    content: url("home(1).png");
+}
+
+.home-content {
+    grid-column: 2/3;
+}
+.profile {
+    content: url("card-account-details.png");
+    grid-column: 1/2;
+    justify-self: right;
+
+}
+.profile-content {
+    grid-column: 2/3;
+}
+.messages {
+    content: url("message-reply.png") ;
+    grid-column: 1;
+    justify-self: right;
+
+}
+.messages-content {
+    grid-column: 2/3;
+}
+.history {
+    content: url("clock-time-three.png") ;
+    grid-column: 1/2;
+    justify-self: right;
+
+}
+.history-content {
+    grid-column: 2/3;
+
+}
+.tasks {
+    content: url("file-multiple.png") ;
+    grid-column: 1;
+    justify-self: right;
+
+}
+.tasks-content {
+    grid-column: 2/3;
+}
+.communities {
+    content: url("account-group.png") ;
+    grid-column: 1;
+    justify-self: right;
+
+}
+
+.communities-content {
+    grid-column: 2/3;
+    padding-bottom: 30px;
+
+}
+
+.settings {
+    content: url("cog.png") ;
+    grid-column: 1;
+    justify-self: right;
+
+}
+.settings-content {
+    grid-column: 2/3;
+}
+
+.support {
+    content: url("help-box.png") ;
+    grid-column: 1;
+    justify-self: right;
+
+}
+.privacy {
+    content: url("shield-check.png") ;
+    grid-column: 1;
+    justify-self: right;
+
 }
 
 
@@ -45,8 +143,8 @@ body {
     grid-area: body;
     background-color: #E2E8F0;
     display: inline-grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 5% 1fr;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 5% fit-content(40%);
     padding: 20px;
 }
 
@@ -68,7 +166,10 @@ body {
 #projectTitle {
     grid-column: 1 / 3;
 }
-
+#projectTitle {
+    padding: 10px;
+    font-size: 16px;
+}
 #yourProjects > div {
     background-color: white;
 }
@@ -143,7 +244,7 @@ body {
     display: grid;
     padding-left: 20px;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: fit-content(40%);
 }
 
 
@@ -151,7 +252,9 @@ body {
 #announcement {
     grid-column: 2 /3;
     grid-row: 1;
-    padding: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    font-size: 16px;
 }
 
 
@@ -191,6 +294,7 @@ body {
     grid-area: header;
 
     display: grid;
+    row-gap: 15px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
 
@@ -260,23 +364,54 @@ body {
     grid-row: 1;
     font-size: 16px;
     justify-self: left;
-
 }
 
 #bottomHeader {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(24, 1fr);
     grid-template-rows: 1fr;
 
 }
 
+#profilepic2 {
+    grid-column: 2/4;
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    justify-self: center;
+    background-color: #FACC15;
+}
+#profilename {
+    font-size: 14px;
+    font-weight: 500;
+    grid-column: 4/10;
+}
+
+.nametag {
+    font-size: 18px;
+    font-weight: 600;
+}
+
 button {
     border-radius: 16px;
-    height: 38px;
-    width: 100px;
+    height: 33px;
+    width: 85px;
     border: none;
     background-color: #1992D4;
     color: white;
+}
+
+.new {
+    grid-column: 16/18;
+
+
+}
+.upload {
+    grid-column: 19/21;
+
+}
+.sharebutton{
+    grid-column: 22/1624;
 }
 
 h2 {
