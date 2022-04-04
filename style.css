@@ -11,7 +11,7 @@ body {
     height: 100vh;
     display: inline-grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr  7fr;
+    grid-template-rows: repeat(2, fit-content(30%));
     grid-template-areas: 
     "sideNav header"
     "sideNav body"
@@ -30,7 +30,7 @@ body {
     display: grid;
     column-gap: 15px;
     row-gap: 10px;
-    grid-template-columns: 20% 50% 10% 5%;
+    grid-template-columns: repeat(4, fit-content(40%));
 
 
 }
@@ -143,7 +143,7 @@ body {
     grid-area: body;
     background-color: #E2E8F0;
     display: inline-grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 70% 30%;
     grid-template-rows: 5% fit-content(40%);
     padding: 20px;
 }
@@ -159,7 +159,7 @@ body {
     row-gap: 20px;
     column-gap: 20px;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, fit-content(70%));
 }
 
 
@@ -175,12 +175,17 @@ body {
 }
 
 .projects {
+    border: solid;
+    border-width: 0;
     border-radius: 8px;
+    border-left-color: #FACC15;
+    border-left-width: 7px;
+    padding: 20px;
 
     display: grid;
     row-gap: 10px;
-    grid-template-columns: 2% 95%;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 100%/3)
 }
 .style {
     grid-column: 1;
@@ -190,27 +195,28 @@ body {
 
 .projects > p {
     font-weight: 500;
-    padding: 20px;
 
     color: #B1B1B1;
     font-size: 14px;
     grid-column: 2;
-    grid-row: 1
+    grid-row: 2;
+    padding-top: 10px;
+
 }
 
 .projects > h3 {
+    display: inline-block;
     font-size: 14px;
     font-weight: 600;
     margin: 0;
     grid-column: 2;
-    grid-row: 1;
-    padding: 20px;
+    grid-row: 2;
 }
 
 
 .iconContainer {
     padding: 20px;
-    grid-row: 1;
+    grid-row: 3;
     grid-column: 2;
     display: flex;
     justify-content: flex-end;
@@ -292,7 +298,6 @@ body {
 
 #header {
     grid-area: header;
-
     display: grid;
     row-gap: 15px;
     grid-template-columns: 1fr;
@@ -302,11 +307,28 @@ body {
 
 #topHeader {
     display: grid;
-    grid-template-columns: repeat(24,1fr);
+    grid-template-columns: 65% 35%;
     grid-template-rows: 1fr;
+
+}
+
+#topheader-left {
+    grid-column: 1;
     position: relative;
-    justify-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
+
+}
+
+#topheader-right {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-direction: row;
 
 }
 
@@ -318,15 +340,14 @@ body {
     width: 16px;
     height: 16px;
     top: 17px;
-    left: 40px;
+    left: 50px;
 }
 
 
 
 #searchbar {
-
     background-color: #E2E8F0;
-    width: 70%;
+    width: 65%;
     height: 1%;
     text-align: center;
     border-radius: 10px;
@@ -335,18 +356,13 @@ body {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-    grid-column: 1/18 ;
-    grid-row: 1;
   }
 
   #alertsIcon {
-    position:absolute;
     background-image: url("bell-ring-outline.png");
     background-size: 24px 24px;
     width: 24px;
     height: 24px;
-    grid-column: 18/19;
-    grid-row: 1;
 
 }
 
@@ -355,41 +371,56 @@ body {
     background-color: #FACC15;
     width: 37px;
     height: 37px;
-    grid-column: 19/21;
-    grid-row: 1;
 }
 
 #name {
-    grid-column: 21/25;
     grid-row: 1;
     font-size: 16px;
-    justify-self: left;
 }
 
 #bottomHeader {
     display: grid;
-    grid-template-columns: repeat(24, 1fr);
+    grid-template-columns: 60% 40%;
     grid-template-rows: 1fr;
+    
+
+}
+#leftContainer {
+    grid-column: 1;
+    grid-row:1;
+    display: flex;
+    justify-content: left;
+    padding-left: 50px;
 
 }
 
 #profilepic2 {
-    grid-column: 2/4;
+
     border-radius: 50%;
     width: 46px;
     height: 46px;
-    justify-self: center;
     background-color: #FACC15;
+
 }
 #profilename {
     font-size: 14px;
     font-weight: 500;
-    grid-column: 4/10;
+    padding-left: 20px;
+
+
 }
 
 .nametag {
     font-size: 18px;
     font-weight: 600;
+}
+
+#buttonContainer {
+    grid-column: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around ;
+
 }
 
 button {
@@ -402,16 +433,13 @@ button {
 }
 
 .new {
-    grid-column: 16/18;
 
 
 }
 .upload {
-    grid-column: 19/21;
 
 }
 .sharebutton{
-    grid-column: 22/1624;
 }
 
 h2 {
