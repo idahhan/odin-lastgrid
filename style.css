@@ -1,8 +1,9 @@
 body {
     margin: 0;
-    font-size: 21px;
+    font-size: 12px;
     font-family: 'Roboto', sans-serif;
     text-overflow: ellipsis;
+
 }
 
 
@@ -28,7 +29,7 @@ body {
 
 #sideNav1 {
     display: grid;
-    column-gap: 15px;
+    column-gap: 10px;
     row-gap: 10px;
     grid-template-columns: repeat(4, fit-content(40%));
 
@@ -36,6 +37,7 @@ body {
 }
 
 .sideNavheader {
+    
     grid-column: 1/2;
     justify-self: right;
     content: url("view-dashboard.png");
@@ -43,9 +45,11 @@ body {
 
 }
 .sideNavheader-content{
+    align-self: center;
+    font-size: 16px;
     grid-column: 2/3;
     padding-top: 15px;
-    padding-bottom: 30px;
+    padding-bottom: 25px;
 
 }
 
@@ -59,58 +63,82 @@ body {
     grid-column: 1/2;
     justify-self: right;
     content: url("home(1).png");
+    width: 21px;
+    height: 21px;
 }
 
 .home-content {
     grid-column: 2/3;
+    align-self: initial;
+    padding-top: 4px;
 }
 .profile {
     content: url("card-account-details.png");
     grid-column: 1/2;
     justify-self: right;
+    width: 21px;
+    height: 21px;
 
 }
 .profile-content {
     grid-column: 2/3;
+    padding-top: 4px;
+
 }
 .messages {
     content: url("message-reply.png") ;
     grid-column: 1;
     justify-self: right;
+    padding-top: 4px;
+
 
 }
 .messages-content {
     grid-column: 2/3;
+    padding-top: 4px;
+
 }
 .history {
     content: url("clock-time-three.png") ;
     grid-column: 1/2;
     justify-self: right;
+    width: 21px;
+    height: 21px;
 
 }
 .history-content {
     grid-column: 2/3;
+    padding-top: 4px;
+
 
 }
 .tasks {
     content: url("file-multiple.png") ;
     grid-column: 1;
     justify-self: right;
+    width: 21px;
+    height: 21px;
 
 }
 .tasks-content {
     grid-column: 2/3;
+    padding-top: 4px;
+
 }
 .communities {
     content: url("account-group.png") ;
     grid-column: 1;
     justify-self: right;
+    width: 21px;
+    height: 21px;
 
 }
 
 .communities-content {
     grid-column: 2/3;
     padding-bottom: 30px;
+    padding-top: 4px;
+
 
 }
 
@@ -118,22 +146,39 @@ body {
     content: url("cog.png") ;
     grid-column: 1;
     justify-self: right;
+    width: 21px;
+    height: 21px;
 
 }
 .settings-content {
     grid-column: 2/3;
+    padding-top: 4px;
+
 }
 
 .support {
     content: url("help-box.png") ;
     grid-column: 1;
     justify-self: right;
+    width: 21px;
+    height: 21px;
+}
+.support-content {
+    grid-column: 2/3;
+    padding-top: 4px;
 
 }
 .privacy {
     content: url("shield-check.png") ;
     grid-column: 1;
     justify-self: right;
+    width: 21px;
+    height: 21px;
+}
+
+.privacy-content{
+    grid-column: 2/3;
+    padding-top: 4px;
 
 }
 
@@ -145,6 +190,7 @@ body {
     display: inline-grid;
     grid-template-columns: 70% 30%;
     grid-template-rows: 5% fit-content(40%);
+    column-gap: 20px;
     padding: 20px;
 }
 
@@ -180,8 +226,9 @@ body {
     border-radius: 8px;
     border-left-color: #FACC15;
     border-left-width: 7px;
-    padding: 20px;
-
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
     display: grid;
     row-gap: 10px;
     grid-template-columns: 1fr;
@@ -197,7 +244,7 @@ body {
     font-weight: 500;
 
     color: #B1B1B1;
-    font-size: 14px;
+    font-size: 10px;
     grid-column: 2;
     grid-row: 2;
     padding-top: 10px;
@@ -206,7 +253,7 @@ body {
 
 .projects > h3 {
     display: inline-block;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     margin: 0;
     grid-column: 2;
@@ -215,7 +262,7 @@ body {
 
 
 .iconContainer {
-    padding: 20px;
+    padding-bottom: 15px;
     grid-row: 3;
     grid-column: 2;
     display: flex;
@@ -228,31 +275,28 @@ body {
 
 .favorite {
     background-image: url("star-plus-outline\(2\).png");
-    background-size: 24px 24px;
-    width: 24px;
-    height: 24px;
+    background-size: 18px 18px;
+    width: 18px;
+    height: 18px;
 }
 .watch {
     background-image: url("eye-plus-outline.png");
-    background-size: 24px 24px;
-    width: 24px;
-    height: 24px;
+    background-size: 18px 18px;
+    width: 18px;
+    height: 18px;
 }
 
 .share{
     background-image: url("share-variant-outline.png");
-    background-size: 24px 24px;
-    width: 24px;
-    height: 24px;   
+    background-size: 18px 18px;
+    width: 18px;
+    height: 18px;   
 }
 
-#other {
-    display: grid;
-    padding-left: 20px;
-    grid-template-columns: 1fr;
-    grid-template-rows: fit-content(40%);
+.announcement {
+    border-bottom-color: black;
+    border-bottom-width: 1px;
 }
-
 
 
 #announcement {
@@ -263,36 +307,62 @@ body {
     font-size: 16px;
 }
 
+#aContainer {
+    grid-column: 2/3;
+    grid-row:1;
+    border: solid;   
+    border-radius: 8px;
+    border-width: 0;
+    background-color: white;
+}
+
+#tContainer {
+    padding: 10px;
+    grid-column: 2/3;
+    grid-row:1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+
 
 .announcement {
     padding: 20px;
     overflow: hidden;
 }
 .announcement > h4 {
-    font-size: 14px;;
+    font-size: 12px;;
 }
 .announcement > p {
-    font-size: 12px;
+    font-size: 10px;
     color: #B1B1B1;
 
 }
-.announcement, .trending {
-    background: white;;
-}
+
+
 
 #trending {
-    padding: 20px;
+    grid-column: 2/3;
+    grid-row:1;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .trending {
-    padding: 20px;
+    padding: 0;
 }
 .trending > h4 {
-    font-size: 14px;;
+    font-size: 12px;;
 }
 
 .trending > p {
-    font-size: 12px;
+    font-size: 10px;
 }
 
 
@@ -307,7 +377,7 @@ body {
 
 #topHeader {
     display: grid;
-    grid-template-columns: 65% 35%;
+    grid-template-columns: 70% 30%;
     grid-template-rows: 1fr;
 
 }
@@ -340,7 +410,7 @@ body {
     width: 16px;
     height: 16px;
     top: 17px;
-    left: 50px;
+    left: 39px;
 }
 
 
@@ -360,27 +430,29 @@ body {
 
   #alertsIcon {
     background-image: url("bell-ring-outline.png");
-    background-size: 24px 24px;
-    width: 24px;
-    height: 24px;
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
 
 }
 
 #profilepic {
     border-radius: 50%;
     background-color: #FACC15;
-    width: 37px;
-    height: 37px;
+    width: 33px;
+    height: 33px;
 }
 
 #name {
     grid-row: 1;
-    font-size: 16px;
+    font-size: 12px;
+    font-weight: 500;
 }
 
 #bottomHeader {
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 65% 35%;
+    align-items: center;
     grid-template-rows: 1fr;
     
 
@@ -397,13 +469,13 @@ body {
 #profilepic2 {
 
     border-radius: 50%;
-    width: 46px;
-    height: 46px;
+    width: 40px;
+    height: 40px;
     background-color: #FACC15;
 
 }
 #profilename {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
     padding-left: 20px;
 
@@ -411,7 +483,7 @@ body {
 }
 
 .nametag {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
 }
 
@@ -425,8 +497,9 @@ body {
 
 button {
     border-radius: 16px;
-    height: 33px;
-    width: 85px;
+    font-size: 10px;
+    height: 25px;
+    width: 60px;
     border: none;
     background-color: #1992D4;
     color: white;
